@@ -1,0 +1,23 @@
+name: getx_gen
+description: getx helper
+version: 0.0.1
+homepage: https://github.com/sersr/getx_gen
+publish_to: none
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  source_gen: any
+  build: any
+  getx_annotation:
+    git:
+      url: https://github.com/sersr/getx_annotation
+
+dependency_overrides:
+  getx_annotation:
+    path: ../getx_annotation
+
+dev_dependencies:
+  test: any
+  lints: ^1.0.1

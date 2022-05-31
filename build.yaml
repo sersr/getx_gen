@@ -1,0 +1,15 @@
+targets:
+  $default:
+    builders:
+      getx_gen:
+        generate_for:
+          - test/*
+
+builders:
+  getx_gen:
+    import: "package:getx_gen/src/builder.dart"
+    builder_factories: ["getx_page_gen"]
+    build_extensions: { ".dart": ["nop.g.part"] }
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
